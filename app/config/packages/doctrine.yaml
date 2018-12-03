@@ -20,9 +20,6 @@ doctrine:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
-        default_table_options:
-            charset: latin1
-            collate: latin1_general_ci
         mappings:
             App:
                 is_bundle: false
