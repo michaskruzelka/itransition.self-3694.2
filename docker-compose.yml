@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+    php:
+        build: ./app
+        depends_on:
+            - db
+        env_file:
+            - ./app/.env
+        volumes:
+            - ./app:/srv/app:rw
+
+    db:
+        image: mysql:8.0
+        volumes:
+            - db-data:/var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=importTest
+            - MYSQL_USER=app
+            - MYSQL_PASSWORD=2MKeRnNmxhECkqyf
+        ports:
+            - "3307:3306"
+
+volumes:
+    db-data: {}
