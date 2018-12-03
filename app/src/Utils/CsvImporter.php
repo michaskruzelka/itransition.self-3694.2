@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Utils;
 
+use League\Csv\Reader;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
@@ -34,7 +35,7 @@ class CsvImporter
     public function import(string $pathToFile): array
     {
 
-        // fetching data from a csv - https://codereviewvideos.com/course/how-to-import-a-csv-in-symfony/video/importing-csv-data-the-easy-way
+        // fetching data from a csv - https://csv.thephpleague.com/
         // bulk insert - https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/batch-processing.html
 
 
